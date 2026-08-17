@@ -27,4 +27,11 @@ class TransactionService
         $newStatus = $transaction->status === 'pending' ? 'settled' : 'pending';
         $this->transactionRepo->update($transaction, ['status' => $newStatus]);
     }
+    public function getTransactionsByType(User $user, string $type, ?string $search = null): array
+    {
+        $transactions = $this->transactionRepo->getPaginatedForUser($user, $search, $type);
+        $totalPending = $this->transactionRepo->getPendingSumByType($user, $type);
+
+        return compact('transactions', 'totalPending', 'type');
+    }
 }

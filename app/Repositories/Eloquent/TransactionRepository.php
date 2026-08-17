@@ -9,17 +9,21 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class TransactionRepository implements TransactionRepositoryInterface
 {
-    public function getPaginatedForUser(User $user, ?string $search = null, int $perPage = 10): LengthAwarePaginator
+    public function getPaginatedForUser(User $user, ?string $search = null, ?string $type = null, int $perPage = 10): LengthAwarePaginator
     {
         $query = $user->transactions();
+
+        if ($type) {
+            $query->where('type', $type);
+        }
 
         if ($search) {
             $query->where('title', 'like', "%{$search}%");
         }
 
         return $query->orderBy('transaction_date', 'desc')
-                     ->paginate($perPage)
-                     ->withQueryString();
+                    ->paginate($perPage)
+                    ->withQueryString();
     }
 
     public function getPendingSumByType(User $user, string $type): float

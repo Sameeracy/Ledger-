@@ -116,4 +116,25 @@ class TransactionController extends Controller
 
         return redirect()->route('transactions.index')->with('success', 'Record deleted successfully.');
     }
+    public function credits(Request $request)
+{
+    $data = $this->transactionService->getTransactionsByType(
+        Auth::user(),
+        'they_owe',
+        $request->query('search')
+    );
+
+    return view('transactions.credits', $data);
+}
+
+public function debits(Request $request)
+    {
+        $data = $this->transactionService->getTransactionsByType(
+            Auth::user(),
+            'you_owe',
+            $request->query('search')
+        );
+
+        return view('transactions.debits', $data);
+    }
 }
