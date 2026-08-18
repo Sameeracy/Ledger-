@@ -22,7 +22,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm rounded-3 border-start border-success border-4">
                 <div class="card-body">
-                    <span class="text-muted small text-uppercase fw-semibold">People Owe You</span>
+                    <span class="text-muted small text-uppercase fw-semibold">Credit</span>
                     <h3 class="text-success fw-bold mt-2 mb-0">
                         +Rs. {{ number_format($theyOwe, 2) }}
                     </h3>
@@ -34,7 +34,7 @@
         <div class="col-md-4">
             <div class="card border-0 shadow-sm rounded-3 border-start border-danger border-4">
                 <div class="card-body">
-                    <span class="text-muted small text-uppercase fw-semibold">You Owe Others</span>
+                    <span class="text-muted small text-uppercase fw-semibold">Debit</span>
                     <h3 class="text-danger fw-bold mt-2 mb-0">
                         -Rs. {{ number_format($youOwe, 2) }}
                     </h3>

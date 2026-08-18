@@ -88,6 +88,10 @@ class TransactionController extends Controller
 
         return redirect()->route('transactions.index')->with('success', 'Record updated successfully.');
     }
+    public function export()
+    {
+        return $this->transactionService->exportAllToExcel(Auth::user());
+    }
 
     /**
      * Quick toggle for marking as settled / pending.

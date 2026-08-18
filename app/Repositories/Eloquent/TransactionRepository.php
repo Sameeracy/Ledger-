@@ -48,4 +48,10 @@ class TransactionRepository implements TransactionRepositoryInterface
     {
         return $transaction->delete();
     }
+    public function getAllForUser(User $user)
+    {
+        return $user->transactions()
+                    ->orderBy('transaction_date', 'desc')
+                    ->get();
+    }
 }

@@ -21,12 +21,12 @@
                         {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="userDropdown">
-                        <li><a class="dropdown-item py-2" href="{{ route('profile.edit') }}">👤 Profile Settings</a></li>
+                        <li><a class="dropdown-item py-2" href="{{ route('profile.edit') }}"> Profile Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form method="POST" action="{{ route('logout') }}" class="m-0">
                                 @csrf
-                                <button type="submit" class="dropdown-item py-2 text-danger">🚪 Log Out</button>
+                                <button type="submit" class="dropdown-item py-2 text-danger"> Log Out</button>
                             </form>
                         </li>
                     </ul>
@@ -46,22 +46,30 @@
                         </a>
                     </div>
 
-                    <div class="list-group list-group-flush">
+                    <div class="list-group list-group-flush text-center">
                         <a href="{{ route('dashboard') }}" 
                         class="list-group-item list-group-item-action border-0 rounded-3 py-2 mb-1 {{ request()->routeIs('dashboard') ? 'active bg-primary text-white' : 'text-dark' }}">
-                            Overview
+                             Overview
                         </a>
                         <a href="{{ route('transactions.credits') }}" 
                         class="list-group-item list-group-item-action border-0 rounded-3 py-2 mb-1 {{ request()->routeIs('transactions.credits') ? 'active bg-success text-white' : 'text-dark' }}">
-                            Credits
+                             Credits
                         </a>
                         <a href="{{ route('transactions.debits') }}" 
                         class="list-group-item list-group-item-action border-0 rounded-3 py-2 mb-1 {{ request()->routeIs('transactions.debits') ? 'active bg-danger text-white' : 'text-dark' }}">
-                            Debits
+                             Debits
                         </a>
-                        <a href="{{ route('dashboard.export-pdf') }}" 
-                        class="list-group-item list-group-item-action border-0 rounded-3 py-2 mb-1 text-dark">
-                            Export PDF
+                    </div>
+
+                    <hr class="my-3 text-muted">
+
+                    <!-- Action Buttons -->
+                    <div class="d-grid gap-2">
+                        <a href="{{ route('dashboard.export-pdf') }}" class="btn btn-outline-danger fw-semibold">
+                             Export PDF
+                        </a>
+                        <a href="{{ route('transactions.export') }}" class="btn btn-outline-success fw-semibold">
+                             Export to Excel
                         </a>
                     </div>
                 </nav>

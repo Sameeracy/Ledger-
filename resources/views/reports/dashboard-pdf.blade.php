@@ -146,7 +146,7 @@
         <tr>
             <!-- People Owe You -->
             <td class="card card-green-border" style="width: 33%;">
-                <div class="card-label">PEOPLE OWE YOU</div>
+                <div class="card-label">Credit</div>
                 <div class="card-value text-success">
                     +Rs. {{ number_format($cards['people_owe_you'], 2) }}
                 </div>
@@ -154,7 +154,7 @@
 
             <!-- You Owe Others -->
             <td class="card card-red-border" style="width: 33%;">
-                <div class="card-label">YOU OWE OTHERS</div>
+                <div class="card-label">Debit</div>
                 <div class="card-value text-danger">
                     -Rs. {{ number_format($cards['you_owe_others'], 2) }}
                 </div>
