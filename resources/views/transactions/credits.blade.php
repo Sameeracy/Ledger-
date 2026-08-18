@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
-            <h3 class="fw-bold text-success mb-1">Credits (Money Owed to You)</h3>
+            <h3 class="fw-bold text-success mb-1">Credits</h3>
             <p class="text-muted small mb-0">Total Active Credits: <strong>+Rs. {{ number_format($totalPending, 2) }}</strong></p>
         </div>
         <form method="GET" action="{{ route('transactions.credits') }}" class="d-flex gap-2">

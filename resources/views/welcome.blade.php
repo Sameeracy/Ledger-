@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ledger+ | Smart Debt & Expense Tracking</title>
-
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/logo/favicon.jpeg') }}">  
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="bg-light min-vh-100 d-flex flex-column">

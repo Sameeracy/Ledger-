@@ -3,6 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+
+Route::middleware(['auth'])->group(function () {
+    // Add this route
+    Route::get('/dashboard/export-pdf', [DashboardController::class, 'exportPdf'])->name('dashboard.export-pdf');
+});
 
 // Public Welcome Page
 Route::get('/', function () {

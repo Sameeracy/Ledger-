@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
-            <h3 class="fw-bold text-danger mb-1">Debits (Money You Owe)</h3>
+            <h3 class="fw-bold text-danger mb-1">Debits</h3>
             <p class="text-muted small mb-0">Total Active Debts: <strong>-Rs. {{ number_format($totalPending, 2) }}</strong></p>
         </div>
         <form method="GET" action="{{ route('transactions.debits') }}" class="d-flex gap-2">
