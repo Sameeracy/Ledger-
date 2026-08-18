@@ -134,7 +134,6 @@ public function debits(Request $request)
             'you_owe',
             $request->query('search')
         );
-
         return view('transactions.debits', $data);
     }
 }
