@@ -55,7 +55,6 @@
             </nav>
 
             <div class="sidebar-user">
-                <img class="avatar-img avatar-md sidebar-user-avatar" src="{{ asset('assets/images/avatar/avatar.jpg') }}" alt="{{ Auth::user()->name }}">
                 <strong class="text-truncate d-block w-100 px-2">{{ Auth::user()->name }}</strong>
                 <small class="text-truncate d-block w-100 px-2 text-muted">{{ Auth::user()->email }}</small>
             </div>
@@ -113,8 +112,7 @@
                         <!-- User Profile Dropdown -->
                         <div class="dropdown">
                             <button class="profile-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="avatar-img avatar-sm" src="{{ asset('assets/images/avatar/avatar.jpg') }}" alt="{{ Auth::user()->name }}">
-                                <span class="profile-name d-none d-sm-inline">{{ Auth::user()->name }}</span>
+                                <span class="profile-name">{{ Auth::user()->name }}</span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end shadow-sm">
                                 <li>

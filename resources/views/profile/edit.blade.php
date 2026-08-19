@@ -17,13 +17,11 @@
     <div class="row g-4">
         <!-- Left: Profile Summary Card -->
         <div class="col-12 col-xl-4">
-            <div class="panel text-center profile-card h-100">
-                <div class="profile-cover">
-                    <img src="{{ asset('assets/images/png/dasher-ui-bootstrap-5.jpg') }}" alt="Ledger+ Preview">
+            <div class="panel profile-card h-100">
+                <div class="pb-3 border-bottom mb-3 text-center">
+                    <h2 class="h5 mb-1 fw-bold">{{ $user->name }}</h2>
+                    <p class="text-muted small mb-0">{{ $user->email }}</p>
                 </div>
-                <img class="avatar-img avatar-xl profile-photo mx-auto" src="{{ asset('assets/images/avatar/avatar.jpg') }}" alt="{{ $user->name }}">
-                <h2 class="h5 mt-3 mb-1 fw-bold">{{ $user->name }}</h2>
-                <p class="text-muted small mb-3">{{ $user->email }}</p>
 
                 <div class="d-flex justify-content-center gap-2 mb-3">
                     <span class="badge text-bg-primary">Account Owner</span>
