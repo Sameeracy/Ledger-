@@ -91,8 +91,8 @@
                     <input type="search" 
                            name="search" 
                            value="{{ request('search') }}" 
-                           class="form-control border-start-0 ps-0" 
-                           placeholder="Search record by title, person name, or notes...">
+                           class="form-control border-start-0 ps-3" 
+                           placeholder="Search record by title">
                 </div>
             </div>
             <div class="col-12 col-md-3 d-flex gap-2">
