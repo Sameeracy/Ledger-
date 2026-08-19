@@ -18,37 +18,37 @@
         <!-- adminHMD Sidebar Navigation -->
         <aside class="admin-sidebar" id="adminSidebar" aria-label="Main navigation">
             <div class="sidebar-header">
-                <a class="brand-mark" href="{{ route('dashboard') }}" aria-label="Ledger+ dashboard">
+                <a class="brand-mark text-decoration-none" href="{{ route('dashboard') }}" aria-label="Ledger+ dashboard">
                     <span class="brand-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
-                    <span class="brand-copy">
-                        <span class="brand-title">Ledger<span class="text-primary">+</span></span>
-                        <span class="brand-subtitle">Expense & Debt Ledger</span>
+                    <span class="brand-copy text-decoration-none">
+                        <span class="brand-title text-decoration-none">Ledger<span class="text-primary">+</span></span>
+                        <span class="brand-subtitle text-decoration-none">Expense & Debt Ledger</span>
                     </span>
                 </a>
             </div>
 
             <nav class="sidebar-nav">
-                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                     <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
                     <span class="nav-text">Dashboard</span>
                 </a>
-                <a class="nav-link {{ request()->routeIs('transactions.index') ? 'active' : '' }}" href="{{ route('transactions.index') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('transactions.index') ? 'active' : '' }}" href="{{ route('transactions.index') }}">
                     <span class="nav-icon"><i class="bi bi-receipt" aria-hidden="true"></i></span>
                     <span class="nav-text">All Records</span>
                 </a>
-                <a class="nav-link {{ request()->routeIs('transactions.credits') ? 'active' : '' }}" href="{{ route('transactions.credits') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('transactions.credits') ? 'active' : '' }}" href="{{ route('transactions.credits') }}">
                     <span class="nav-icon"><i class="bi bi-arrow-down-left-circle" aria-hidden="true"></i></span>
                     <span class="nav-text">Credits (+Rs.)</span>
                 </a>
-                <a class="nav-link {{ request()->routeIs('transactions.debits') ? 'active' : '' }}" href="{{ route('transactions.debits') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('transactions.debits') ? 'active' : '' }}" href="{{ route('transactions.debits') }}">
                     <span class="nav-icon"><i class="bi bi-arrow-up-right-circle" aria-hidden="true"></i></span>
                     <span class="nav-text">Debits (-Rs.)</span>
                 </a>
-                <a class="nav-link {{ request()->routeIs('transactions.create') ? 'active' : '' }}" href="{{ route('transactions.create') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('transactions.create') ? 'active' : '' }}" href="{{ route('transactions.create') }}">
                     <span class="nav-icon"><i class="bi bi-plus-circle" aria-hidden="true"></i></span>
                     <span class="nav-text">New Record</span>
                 </a>
-                <a class="nav-link {{ request()->routeIs('profile.edit') ? 'active' : '' }}" href="{{ route('profile.edit') }}">
+                <a class="nav-link text-decoration-none {{ request()->routeIs('profile.edit') ? 'active' : '' }}" href="{{ route('profile.edit') }}">
                     <span class="nav-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
                     <span class="nav-text">Profile Settings</span>
                 </a>

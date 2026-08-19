@@ -53,13 +53,27 @@ a {
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
-  /* Reserve scrollbar gutter to keep inner content width stable so header/footer dividers align with scrollbar */
-  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
   background: var(--admin-sidebar);
   color: #ffffff;
   box-shadow: 18px 0 42px rgba(15, 23, 42, 0.18);
   transform: translateX(0);
   transition: width 0.2s ease, transform 0.2s ease;
+}
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.admin-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .sidebar-header {
@@ -68,17 +82,40 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.brand-mark,
+.brand-mark:hover,
+.brand-mark:focus,
+.brand-mark:active,
+.brand-mark *,
+.brand-copy,
+.brand-title,
+.brand-subtitle,
+.admin-sidebar a,
+.admin-sidebar a:hover,
+.admin-sidebar a:focus,
+.admin-sidebar a:active,
+.sidebar-nav .nav-link,
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link:focus,
+.sidebar-nav .nav-link.active,
+.sidebar-nav .nav-text,
+.sidebar-nav * {
+  text-decoration: none !important;
+}
+
 .brand-mark {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   min-width: 0;
   color: #ffffff;
+  text-decoration: none !important;
 }
 
 .brand-mark:hover,
 .brand-mark:focus {
   color: #ffffff;
+  text-decoration: none !important;
 }
 
 .brand-icon,
@@ -1206,6 +1243,136 @@ html[data-theme="dark"] .section-title i {
   color: #bfdbfe;
 }
 
+/* Metric Icons - Dark Mode Glass & Glow */
+html[data-theme="dark"] .metric-icon {
+  background: rgba(96, 165, 250, 0.14) !important;
+  color: #60a5fa !important;
+  border: 1px solid rgba(96, 165, 250, 0.28) !important;
+  box-shadow: 0 0 14px rgba(96, 165, 250, 0.25) !important;
+}
+
+html[data-theme="dark"] .metric-success .metric-icon {
+  background: rgba(45, 212, 191, 0.14) !important;
+  color: #2dd4bf !important;
+  border: 1px solid rgba(45, 212, 191, 0.28) !important;
+  box-shadow: 0 0 14px rgba(45, 212, 191, 0.25) !important;
+}
+
+html[data-theme="dark"] .metric-warning .metric-icon {
+  background: rgba(251, 191, 36, 0.14) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(251, 191, 36, 0.28) !important;
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.25) !important;
+}
+
+html[data-theme="dark"] .metric-danger .metric-icon {
+  background: rgba(248, 113, 113, 0.14) !important;
+  color: #f87171 !important;
+  border: 1px solid rgba(248, 113, 113, 0.28) !important;
+  box-shadow: 0 0 14px rgba(248, 113, 113, 0.25) !important;
+}
+
+/* Metric Cards in Dark Mode */
+html[data-theme="dark"] .metric-card {
+  background: #151f32;
+  border-color: #26354d;
+}
+
+html[data-theme="dark"] .metric-card.metric-success {
+  border-color: rgba(45, 212, 191, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(45, 212, 191, 0.04);
+}
+
+html[data-theme="dark"] .metric-card.metric-danger {
+  border-color: rgba(248, 113, 113, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(248, 113, 113, 0.04);
+}
+
+html[data-theme="dark"] .metric-card.metric-warning {
+  border-color: rgba(251, 191, 36, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(251, 191, 36, 0.04);
+}
+
+html[data-theme="dark"] .metric-card.metric-primary {
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 0 20px rgba(96, 165, 250, 0.04);
+}
+
+/* Neon Glow Effect on Numbers in Dark Mode */
+html[data-theme="dark"] .metric-success .metric-value,
+html[data-theme="dark"] .metric-value.text-success,
+html[data-theme="dark"] td .text-success,
+html[data-theme="dark"] .text-success.fw-bold,
+html[data-theme="dark"] .text-success.fs-6 {
+  color: #34d399 !important;
+  text-shadow: 0 0 14px rgba(52, 211, 153, 0.75), 0 0 28px rgba(52, 211, 153, 0.35);
+}
+
+html[data-theme="dark"] .metric-danger .metric-value,
+html[data-theme="dark"] .metric-value.text-danger,
+html[data-theme="dark"] td .text-danger,
+html[data-theme="dark"] .text-danger.fw-bold,
+html[data-theme="dark"] .text-danger.fs-6 {
+  color: #f87171 !important;
+  text-shadow: 0 0 14px rgba(248, 113, 113, 0.75), 0 0 28px rgba(248, 113, 113, 0.35);
+}
+
+html[data-theme="dark"] .metric-warning .metric-value,
+html[data-theme="dark"] .metric-value.text-warning,
+html[data-theme="dark"] td .text-warning,
+html[data-theme="dark"] .text-warning.fw-bold,
+html[data-theme="dark"] .text-warning.fs-6 {
+  color: #fbbf24 !important;
+  text-shadow: 0 0 14px rgba(251, 191, 36, 0.75), 0 0 28px rgba(251, 191, 36, 0.35);
+}
+
+html[data-theme="dark"] .metric-primary .metric-value,
+html[data-theme="dark"] .metric-value.text-primary,
+html[data-theme="dark"] td .text-primary,
+html[data-theme="dark"] .text-primary.fw-bold,
+html[data-theme="dark"] .text-primary.fs-6 {
+  color: #60a5fa !important;
+  text-shadow: 0 0 14px rgba(96, 165, 250, 0.75), 0 0 28px rgba(96, 165, 250, 0.35);
+}
+
+/* Counterparty Avatar */
+.counterparty-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: var(--admin-surface-soft);
+  border: 1px solid var(--admin-border);
+  color: var(--admin-text);
+  flex: 0 0 auto;
+}
+
+html[data-theme="dark"] .counterparty-avatar {
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+/* Badge Count Header */
+.badge-count {
+  background: var(--admin-surface-soft);
+  color: var(--admin-text);
+  border: 1px solid var(--admin-border);
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .badge-count {
+  background: #172033;
+  border-color: #2f3b52;
+  color: #e5edf7;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1217,6 +1384,18 @@ html[data-theme="dark"] .section-title i {
   border-color: var(--admin-border);
   background: var(--admin-surface-soft);
   color: var(--admin-text);
+}
+
+html[data-theme="dark"] .btn-light {
+  background: #172033 !important;
+  border-color: #2f3b52 !important;
+  color: #e5edf7 !important;
+}
+
+html[data-theme="dark"] .btn-light:hover {
+  background: #1e293b !important;
+  border-color: #475569 !important;
+  color: #ffffff !important;
 }
 
 .btn-outline-secondary {

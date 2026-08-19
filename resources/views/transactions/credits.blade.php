@@ -75,7 +75,7 @@
                 </h2>
                 <p class="text-muted small mb-0">All money that other people owe you.</p>
             </div>
-            <span class="badge bg-light text-body border px-3 py-2">
+            <span class="badge badge-count">
                 {{ $transactions->total() }} Records
             </span>
         </div>
@@ -102,10 +102,10 @@
                             <td class="fw-bold text-body">{{ $transaction->title }}</td>
                             <td>
                                 <div class="d-flex align-items-center gap-2">
-                                    <div class="avatar-sm rounded-circle d-inline-grid place-items-center bg-light border fw-bold text-success" style="width: 28px; height: 28px; font-size: 0.75rem;">
+                                    <div class="counterparty-avatar">
                                         {{ strtoupper(substr($transaction->person_name, 0, 1)) }}
                                     </div>
-                                    <span>{{ $transaction->person_name }}</span>
+                                    <span class="fw-semibold">{{ $transaction->person_name }}</span>
                                 </div>
                             </td>
                             <td class="text-success fw-bold fs-6">+Rs. {{ number_format($transaction->amount, 2) }}</td>

@@ -119,7 +119,7 @@
                 <p class="text-muted small mb-0">List of all recorded financial transactions, receivables, and payables.</p>
             </div>
             <div class="d-flex gap-2 align-items-center">
-                <span class="badge bg-light text-body border px-3 py-2">
+                <span class="badge badge-count">
                     {{ $transactions->total() }} Total Entries
                 </span>
             </div>
@@ -150,10 +150,10 @@
                             </td>
                             <td>
                                 <div class="d-flex align-items-center gap-2">
-                                    <div class="avatar-sm rounded-circle d-inline-grid place-items-center bg-light border fw-bold text-muted" style="width: 28px; height: 28px; font-size: 0.75rem;">
+                                    <div class="counterparty-avatar">
                                         {{ strtoupper(substr($transaction->person_name, 0, 1)) }}
                                     </div>
-                                    <span>{{ $transaction->person_name }}</span>
+                                    <span class="fw-semibold">{{ $transaction->person_name }}</span>
                                 </div>
                             </td>
                             <td>
