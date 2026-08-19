@@ -1,13 +1,18 @@
 <section>
-    <header class="mb-3">
-        <h5 class="fw-bold text-danger mb-1">Delete Account</h5>
-        <p class="text-muted small mb-0">
-            Once your account is deleted, all of its resources and data will be permanently deleted.
-        </p>
-    </header>
+    <div class="panel-header">
+        <div>
+            <h2 class="h5 mb-1 section-title text-danger">
+                <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                <span>Delete Account</span>
+            </h2>
+            <p class="text-muted small mb-0">
+                Once your account is deleted, all of your ledger data, loans, and credit records will be permanently removed.
+            </p>
+        </div>
+    </div>
 
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmUserDeletionModal">
-        Delete Account
+    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#confirmUserDeletionModal">
+        <i class="bi bi-trash me-1"></i> Delete Account
     </button>
 
     <div class="modal fade" id="confirmUserDeletionModal" tabindex="-1" aria-labelledby="confirmUserDeletionModalLabel" aria-hidden="true">
@@ -18,19 +23,21 @@
                     @method('delete')
 
                     <div class="modal-header">
-                        <h5 class="modal-title fw-bold" id="confirmUserDeletionModalLabel">Are you sure?</h5>
+                        <h5 class="modal-title fw-bold" id="confirmUserDeletionModalLabel">
+                            <i class="bi bi-exclamation-octagon text-danger me-2"></i>Delete Account Confirmation
+                        </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-body">
                         <p class="text-muted small mb-3">
-                            Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm.
+                            Are you sure you want to permanently delete your account? Please enter your current password below to confirm this irreversible action.
                         </p>
 
                         <div class="mb-3">
                             <label for="password" class="form-label fw-semibold">Password</label>
                             <input type="password" 
-                                   class="form-control w-100 @error('password', 'userDeletion') is-invalid @enderror" 
+                                   class="form-control @error('password', 'userDeletion') is-invalid @enderror" 
                                    id="password" 
                                    name="password" 
                                    placeholder="Enter your password">
@@ -41,8 +48,10 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-danger">Delete Account</button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash me-1"></i> Permanently Delete
+                        </button>
                     </div>
                 </form>
             </div>
