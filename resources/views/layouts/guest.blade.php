@@ -18,18 +18,13 @@
     <main class="auth-page">
         <section class="auth-card">
             <!-- Brand Mark -->
-            <a class="auth-brand" href="{{ url('/') }}">
+            <a class="auth-brand text-decoration-none" href="{{ url('/') }}">
                 <span class="brand-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span>
-                <span>
-                    <strong>Ledger<span class="text-primary">+</span></strong>
-                    <small>Smart Debt & Expense Manager</small>
+                <span class="d-flex flex-column text-decoration-none">
+                    <strong class="text-decoration-none">Ledger<span class="text-primary">+</span></strong>
+                    <small class="text-decoration-none">Smart Debt & Expense Manager</small>
                 </span>
             </a>
-
-            <!-- Auth Visual Header -->
-            <div class="auth-visual">
-                <img src="{{ asset('assets/images/png/dasher-ui-bootstrap-5.jpg') }}" alt="Ledger+ Dashboard">
-            </div>
 
             {{ $slot }}
         </section>
