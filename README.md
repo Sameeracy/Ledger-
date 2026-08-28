@@ -139,8 +139,4 @@ Run automated feature and unit tests via PHPUnit:
 ```bash
 php artisan test
 
-```
 
-```
-
-```
