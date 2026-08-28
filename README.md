@@ -1,12 +1,6 @@
 ```markdown
 # Ledger+ : Financial Management & Transaction Tracking System
 
-**Author:** Sameer Muhammad[cite: 1]  
-**Internship:** Web Development – KPITB Peshawar, KPK[cite: 1]  
-**Framework / Stack:** Laravel (PHP 8.x), MySQL, Blade, Bootstrap 5, Vite, DomPDF[cite: 4]
-
----
-
 ## 📌 Project Overview
 **Ledger+** is a full-stack personal finance and debt/credit transaction management system engineered with Laravel[cite: 1, 4]. The application provides financial tracking (`you_owe` vs. `they_owe`), real-time balance aggregation, dynamic filtering with query preservation, streamed CSV exports, and downloadable PDF reports[cite: 4]. 
 
